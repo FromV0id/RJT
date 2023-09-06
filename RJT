@@ -1,0 +1,36 @@
+1. SQL
+SELECT surname FROM employees WHERE experience = ( SELECT MAX(experience) FROM employees WHERE experience < ( SELECT MAX(experience) FROM employees ) );
+
+2. Java 1
+public class SwapNumbers {
+
+ public static void main(String[] args) {
+ 
+  x = x + y;
+  y = x - y;
+  x = x - y;  
+   }
+}
+
+
+3 Java 3.1
+public class InversionOfLinkedList {
+    private Node head;
+    
+    public InversionOfLinkedList() {
+        head = null;
+    }
+    
+    public void invertLinkedList() {
+        while (head != null) {
+            Node newHead = head.next;
+            head.next = null;
+            head = newHead;
+        }
+    }
+    
+    public static void main(String[] args) {
+        InversionOfLinkedList instance = new InversionOfLinkedList();
+        instance.invertLinkedList();
+    }
+}
